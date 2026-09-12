@@ -68,9 +68,10 @@ body {
 .todo-form {
     display: flex;
     width: 100%;
-    padding: .5rem;
-    justify-content: space-between;
-    gap: 1rem;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    justify-content: start;
 
     :hover.btn {
         transition: 700ms;
@@ -92,12 +93,12 @@ body {
     .btn {
         all: unset;
         display: flex;
+        width: 3rem;
         justify-content: center;
         align-items: center;
         color: var(--text-color);
         background-color: var(--bg-btn);
         border-radius: 1rem;
-        width: 9%;
         font-size: 1.25rem;
         cursor: pointer;
     }
@@ -110,6 +111,7 @@ body {
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
+    height: fit-content;
     overflow-y: scroll;
 
     .task {
@@ -119,7 +121,7 @@ body {
         gap: 1rem;
         justify-content: space-between;
         align-items: center;
-        height: 3rem;
+        height: fit-content;
         overflow-x: visible;
 
         input[type="checkbox"] {
@@ -183,5 +185,24 @@ body {
     :hover {
         background-color: #35419c;
         border-radius: 2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .app-container {
+        width: calc(100% - 2rem);
+    }
+
+    .todo-form {
+        width: 100%;
+        gap: 0;
+        padding: 0;
+        justify-content: start;
+
+        input {}
+
+        .btn {
+            width: 3rem;
+        }
     }
 }
